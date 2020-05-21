@@ -48,13 +48,16 @@ function writeToFile(fileName, data) {
         ## description
         ${data.projectdescription}
 
-        ## 
+        ## instructions
 
-        * Here I created a README generator using writeFile and axios functions. first i created const variables to require fs, axios, and inquirer
-       then i made type and input methods for each part of the github input such as github username, github email, project description, project title, project installation,
-       and contribution. Then i created a writeToFile function for fileName and data also a variable for the template. I then created a writeFile function for
-       fileName, template, and function(err) and an if and throw statement. Created a template literal for github username through the github API and console
-       logged the response.
+        * Here I created a README generator using writeFile and axios functions. first i created const variables to require fs, axios, and inquirer. Made an inquirer prompt to ask the questions related to github and github projects as well as a response to retrieve the github profile
+        avatar.
+        * Then i made type and input methods for each part of the github input such as github username, github email, project description, project title, project installation,
+       and contribution. 
+        * Then i created a writeToFile function for fileName and data also a variable for the template inside of the function. I then called writeFile fs method for
+       fileName, template, and function(err) and an if and throw statement. Created a request using axios to the github API with the github username and console
+       logged the response. 
+
     `
  fs.writeFile(fileName, template, function(err){
     if (err) throw err
